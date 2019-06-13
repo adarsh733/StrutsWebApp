@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="technosoft" namespace="/" extends="struts-default">
+
+        <action name="load">
+            <result>Homepage.jsp</result>
+        </action>
+        <action name="signupaction" class="struts.action.LogicalCode">
+            <result name="success">jOptionpane.showMessageDialog(this,"Inserted")</result>
+        </action>
+        <action name="signinaction" class="struts.action.LogicalCode" method="checkLogin">
+            <result name="success">MenuPage.jsp</result>
+            <result name="error">Homepage.jsp</result>
+        </action>
+        <action name="signoutaction" class="struts.action.LogicalCode">
+            <result >MenuPage.jsp</result>
+        </action>
+        <action name="hrlogin" class="struts.action.LogicalCode" method="checkHRLogin">
+            <result name="success">HRViewer.jsp</result>
+            <result name="error">HRLogin.jsp</result>
+        </action>
+  </package>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</struts> 
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+ "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+ 
+<validators>
+    <field name="uid">
+        <field-validator type="requiredstring">
+            <message>UserID is required</message> 
+            
+        </field-validator>
+        
+        <field-validator type="stringlength">
+        <param name="minLength">5</param>
+        <param name="maxLength">10</param>
+        <message>UserID must be ${minLength} and ${maxLength} long</message> 
+        </field-validator>
+    </field>
+    <field name="contact">
+        <field-validator type="requiredstring">
+            <message>Contact is required</message> 
+            
+        </field-validator>
+        
+        <field-validator type="stringlength">
+        <param name="minLength">10</param>
+        <param name="maxLength">10</param>
+        <message>contact must be ${minLength} and ${maxLength} long</message> 
+        </field-validator>
+    </field>
+    <field name="mailId">
+        <field-validator type="requiredstring">
+            <message>MailID is required</message> 
+            
+        </field-validator>
+        
+        <field-validator type="email">
+        <message>specify valid format of emailID</message> 
+        </field-validator>
+    </field>
+    
+    
+</validators>
+
+
